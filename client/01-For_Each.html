@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each Method</title>
+</head>
+<body>
+    <h1>For Each Method</h1>
+    <div id="app">
+
+    </div>
+    <script>
+        const app = document.querySelector('#app')
+        app.style.listStyle = 'none'
+        const products = [
+            {
+                name: 'nadar',
+                done: '<input type="checkbox" >'
+            },
+            {
+                name: 'cantar',
+                done: '<input type="checkbox" checked>'
+            },
+            {
+                name: 'estudiar',
+                done: '<input type="checkbox" >'
+            },
+            {
+                name: 'comer',
+                done: '<input type="checkbox" checked>'
+            }
+        ]
+        products.forEach((item, index) => {
+            app.innerHTML += `<li>${item.done} ${item.name.charAt(0).toUpperCase()}${item.name.slice(1)}</li>`
+        });
+    </script>
+</body>
+</html>

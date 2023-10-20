@@ -8,6 +8,17 @@ for (let i = 0; i < objects.length; i++) {
         newArray.push(item);
     }
 }
+
+const filterMethod = objects.filter((item) => (item.length >= 7))
+
+const search = (query) => {
+    const result = objects.filter((item) => (item.includes(query)))
+    return result
+}
 console.log(objects);
 console.log('------------------')
 console.log(newArray);
+console.log('------------------')
+console.log(filterMethod);
+console.log('------------------')
+console.log(search('b'));
